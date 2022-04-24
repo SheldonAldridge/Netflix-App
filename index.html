@@ -15,7 +15,6 @@
     <title>Netflix</title>
   </head>
 
-
   <body>
     <header>
       <div class="container">
@@ -36,6 +35,9 @@
               placeholder="Email Address"
               required
             />
+            
+            <div class="email-error-message"></div>
+
             <input
               class="password"
               type="password"
@@ -43,6 +45,8 @@
               minlength="6"
               required
             />
+            <div class="password-error-message"></div>
+
             <button class="submit">Sign In</button>
             <div class="remember-me">
               <input class="checkbox" type="checkbox" />
@@ -57,46 +61,43 @@
               alt="facebook logo"
             />
             <span class="flogin">Login in with facebook</span>
-        </div>
-            <div class="newNetoflix">
-              <div class="newToNetflix">New to Netflix?</div>
-              <a class="sign-up" data-uia="login-signup-now">Sign up now.</a>
-            </div>
+          </div>
+          <div class="newNetoflix">
+            <div class="newToNetflix">New to Netflix?</div>
+            <a class="sign-up" data-uia="login-signup-now">Sign up now.</a>
+          </div>
 
-            <div class="disclaimer">
-              <span class = "protected"
-                >This page is protected by Google reCAPTCHA to ensure you're not
-                a bot.&nbsp;</span
-              >
-              <button type="submit" class="learn-more">Learn More</button>
-            </div>
-          
+          <div class="disclaimer">
+            <span class="protected"
+              >This page is protected by Google reCAPTCHA to ensure you're not a
+              bot.&nbsp;</span
+            >
+            <button type="submit" class="learn-more">Learn More</button>
+          </div>
         </div>
       </div>
     </main>
 
     <footer class="footer">
+      <div class="footer-box">
+        <div class="contact-container">
+          <p class="questions">Questions? Call</p>
+          <a class="tel">0 801-000-723</a>
+        </div>
 
-        <div class = "footer-box">
-        <div class= "contact-container">
-        <p class="questions">Questions? Call</p>
-        <a class = "tel">0 801-000-723</a>
-    </div>
+        <div class="faq-container">
+          <p class="faq">FAQ</p>
+          <p class="help-center">Help Center</p>
+          <p class="terms">Terms of Use</p>
+          -
+          <p class="privacy">privacy</p>
+        </div>
 
-    <div class = "faq-container">
-        <p class="faq">FAQ</p>
-        <p class="help-center">Help Center</p>
-        <p class="terms">Terms of Use</p>
-        -
-        <p class="privacy">privacy</p>
-    </div>
-
-    <div class = "coockie-container">
-        <p class="coockie">Coockie Preferences</p>
-        <p class="corp">Corporate Information</p>
-    </div>
-
-</div>
+        <div class="coockie-container">
+          <p class="coockie">Coockie Preferences</p>
+          <p class="corp">Corporate Information</p>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
