@@ -1,0 +1,15 @@
+body{
+    margin: auto;
+    box-sizing: border-box;
+}
+
+.navbar{
+    display:flex;
+    background:linear-gradient(rgb(0, 0, 0), rgba(255, 255, 255, 0.842), rgba(255, 255, 255, 0.514));
+    height:9vh;
+}
+
+.netflix-logo
+{
+    filter: invert(11%) sepia(94%) saturate(7355%) hue-rotate(355deg) brightness(91%) contrast(97%); 
+}
