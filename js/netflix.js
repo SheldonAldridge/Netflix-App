@@ -12,13 +12,21 @@ const getData = () =>
   });
 
 const component = {
+
   data() {
     return {
-      list: [{
-          id:
-          
-      }],
-      search: '',
+      movie_properties:{
+        id:[],
+        names:[],
+        genre:[],
+        comingSoon:[],
+        avalable:[],
+        thumbnail:[],
+        preview:[]
+      },
+
+      list: [],
+      search: ''
     }
   },
 
@@ -40,7 +48,20 @@ const component = {
   template: /*HTML Elements*/
     `<div v-if="list.length < 1">Fetching data...</div>
      <div v-else>
-        <input v-model="search">
+     <div class="navbar">
+      <div class="netflix-logo">
+
+        <ul>
+          <li>Home</li>
+          <li>TV Shows</li>
+          <li>Movies</li>
+          <li>New & Popular</li>
+          <li>My List</li>
+        </ul>
+
+        <input class="search" v-model="search">
+        
+      </div>
 
         <ul>
             <li v-for="item in filteredList">{{ item }}</li>
