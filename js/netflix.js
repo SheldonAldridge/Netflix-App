@@ -15,6 +15,7 @@ const component = {
 
   data() {
     return {
+
       movie_properties:{
         id:[],
         names:[],
@@ -41,7 +42,32 @@ const component = {
   },
 
   mounted() {
-    getData().then((resolveData) => { this.list = resolveData;})
+    getData().then((resolveData) => 
+    { 
+      this.list = resolveData;
+      const result = {
+        id:[],
+        names:[],
+        genre:[],
+        comingSoon:[],
+        available:[],
+        thumbnail:[],
+        preview:[]
+      };
+
+      const tmp = new Date();
+      const today = tmp.getFullYear() + '-' + String(tmp.getMonth() + 1).padStart(2,'0') + '-' + String(tmp.getDate()).padStart(2,'0');
+      resolveData.forEach(movie => 
+        {
+        result.id.push(movie.id);
+        result.names.push(movie.name);
+        result.comingSoon.push(movie.is_coming_soon > 0);
+        result.thumbnail.push(movie.image);
+        result.preview.push(movie.description);
+        result.available.push(movie.release_date <= today);
+      });
+      this.movie_properties = result;
+    })
   },
 
 
@@ -49,18 +75,17 @@ const component = {
     `<div v-if="list.length < 1">Fetching data...</div>
      <div v-else>
      <div class="navbar">
-      <div class="netflix-logo">
+      
 
         <ul>
+        <div class="netflix-logo"></div>
           <li>Home</li>
           <li>TV Shows</li>
           <li>Movies</li>
           <li>New & Popular</li>
           <li>My List</li>
-        </ul>
-
-        <input class="search" v-model="search">
-        
+          <input class="search" v-model="search">
+        </ul
       </div>
 
         <ul>
