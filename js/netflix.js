@@ -8,7 +8,7 @@ const getData = () =>
     fetch(url)
       .then((response) => response.json())
       .then((json) => json.data.map((item) => item.name))
-      .then((names) => resolve(names));
+      .then((names) => resolve(names))
   });
 
 const component = {
@@ -72,22 +72,26 @@ const component = {
 
 
   template: /*HTML Elements*/
-    `<div v-if="list.length < 1">Fetching data...</div>
+    `
+    <header>
+    <div v-if="list.length < 1">Fetching data...</div>
      <div v-else>
      <div class="navbar">
-      
+
+     <div class="netflix-logo">
+     <img src="../images/netflix.svg" alt="">
+     </div>
 
         <ul>
-        <div class="netflix-logo"></div>
           <li>Home</li>
           <li>TV Shows</li>
           <li>Movies</li>
           <li>New & Popular</li>
           <li>My List</li>
           <input class="search" v-model="search">
-        </ul
+        </ul>
       </div>
-
+      </header>
         <ul>
             <li v-for="item in filteredList">{{ item }}</li>
         </ul>
