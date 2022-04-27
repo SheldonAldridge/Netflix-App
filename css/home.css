@@ -1,0 +1,51 @@
+body{
+    margin: auto;
+    font-family: 'Helvetica Neue',Helvetica,Arial,sans-serif;
+    background-color: rgb(29, 29, 29);
+}
+
+.navbar{
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 6%, rgba(0,0,0,0.8379726890756303) 26%, rgba(0,0,0,0.5634628851540616) 52%, rgba(0,0,0,0) 100%);
+
+}
+
+.navbar ul{
+  display: flex;
+  list-style: none;
+  margin-left: 13rem;
+  margin-top:1.5rem;
+  
+}
+
+.navbar li{
+padding-left: 8rem;
+cursor: pointer;
+color: white;
+}
+
+.netflix-logo {
+display: flex;
+}
+
+.netflix-logo img
+{
+    margin-top:1rem;
+    height: 35px;
+    width: 167px;
+    margin: 1rem;
+    position: absolute;
+    filter: invert(11%) sepia(94%) saturate(7355%) hue-rotate(355deg) brightness(91%) contrast(97%); 
+}
+
+.search
+{
+    margin-left:12rem;
+}
+
+.hero-image img{
+    position: absolute;
+    margin-top: -5rem;
+    z-index:-1;
+}
+
