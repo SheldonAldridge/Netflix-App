@@ -1,44 +1,52 @@
+/*Storage Key*/
+
+const STORAGE_KEY = "key"
+
 let username = document.querySelector(".username");
 let password = document.querySelector(".password");
-let checkbox= document.querySelector(".checkbox")
 
-//Storing users email and password
-function store()
-{
-    localStorage.setItem('username',username.value)
-    localStorage.setItem('password', password.value)
+
+/* creating a class */
+class User{
+
+    constructor(id,username,password){
+        this.id = id;
+        this.username = username;
+        this.password = password;
+    }
+
+    //Getting the username of user input
+    get getUsername(){
+        return this.username
+    }
+
+    //Setting the username of user input
+    set setUsername(newName){
+        this.username = newName;
+    }
 }
 
-function checkLogin()
-{
-    //get set stored data
-    let usernameStored = localStorage.getItem('username')
-    let passwordStored = localStorage.getItem('password')
+/* --------------------------
+    Variables Setup
+-------------------------- */
 
-    //data entered from login-form
-    let usernameInput = document.querySelector('.username').value
-    let passwordInput = document.querySelector('.password').value
+let signIn = document.querySelector(".submit")
 
-    if(usernameInput != usernameStored)
-    {
-       let eError = document.querySelector(".username-error-message")
-       eError.innerHTML = "Please enter your username!"
-    }
 
-    if(passwordInput != passwordStored)
-    {
-        let pError = document.querySelector(".password-error-message")
-        pError.innerHTML = "Please enter password!"
-    }
+/* ---------------------------
+    Event listens for sign in
+------------------------------*/
+signIn.addEventListener("click", (e) =>{
 
-}
+    let username = document.querySelector('.username').value;
+    let password = document.querySelector('.password').value;
 
-checkbox.addEventListener('click', event =>{
-    
-    let setUsername = document.querySelector(".username").value
+    let user = new User("!A12354#", username, password)
 
-    if(!setUsername)
-    {
-        localStorage.removeItem("setUsername")
-    }
+    user = JSON.stringify(user);
+
+    localStorage.setItem(STORAGE_KEY, user)
 })
+
+
+
