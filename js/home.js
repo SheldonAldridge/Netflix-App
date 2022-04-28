@@ -26,6 +26,14 @@ Vue.createApp({
       if(!localStorage.getItem(WATCHLIST_KEY)){
         let watchList=[];
         watchList.push(this.movies[index]);
+        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList));
+      }
+      else{
+        let watchList = JSON.parse(
+          localStorage.getItem(WATCHLIST_KEY)
+        );
+
+        watchList.push(this.movies[index]);
         localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList))
       }
     }
