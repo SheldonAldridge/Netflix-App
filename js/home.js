@@ -43,10 +43,11 @@ Vue.createApp({
   logout(){
     localStorage.removeItem(USER_SIGNED_IN_KEY);
     window.location.href = "../pages/index.html";
-  }
-  
+  },
+},
+
   mounted(){
-    this.users = JSON.parse(localStorage.getItem(SER_SIGNED_IN_KEY));
+    this.users = JSON.parse(localStorage.getItem(USER_SIGNED_IN_KEY));
     this.username = this.users[0].username;
   },
 })
