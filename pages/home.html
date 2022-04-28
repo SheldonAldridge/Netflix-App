@@ -24,9 +24,9 @@
               <li>TV Shows</li>
               <li>Movies</li>
               <li>New & Popular</li>
-              <li>My List</li>
-              <p class = "username"></p>
-              <input class="search" v-model="search">
+              <li @click="watchList">My List</li>
+              <li id="username">{{username}}</li>
+              <li @click="logout">Logout</li>
             </ul>
           </div>
         </div>
@@ -38,9 +38,7 @@
         </div>
         <section>
         <div class = "movie-list">
-            <ul>
-                <li v-for="item in filteredList">{{ item }}</li>
-            </ul>
+      
         </div>
         </section>
         </main>
