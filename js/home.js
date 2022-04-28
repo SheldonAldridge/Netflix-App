@@ -1,83 +1,34 @@
+import {MovieList} from "../js/moviesClasses.js";
+
 const url = "https://project-apis.codespace.co.za/api/movies";
 const watchlistEndpoint = " https://project-apis.codespace.co.za/api/list";
 
-const { createApp } = window.Vue;
+const USER_SIGNED_IN_KEY = "sign-in-user-storage-key";
+const WATCHLIST_KEY = "watchlist-storage key";
 
-const getData = () =>
-  new Promise((resolve) => {
-    fetch(url)
-      .then((response) => response.json())
-      .then((json) => json.data.map((item) => item.name))
-      .then((names) => resolve(names))
-  });
+Vue.createApp({
+  data(){
+    return{
+      movies:[
+        new movie("#6507", "The Adam Project", "Sci-Fi", "false", "9 March 2022", "../images/The Adam Project.jpg"),
+        new movie("#7770", "Here Comes The Boom", "Comedy", "false", "12 October 2012", "../images/Here Comes The Boom.jpg"),
+        new movie("#2385", "IZombie", "Crime TV Shows", "false", "17 March 2015", "../images/I Zombie.jpg"),
+        new movie("#2892", "The Witcher", "Fantasy TV Shows", "false", "20 December 2019", "../images/The Witcher.jpg"),
+        new movie("#8679", "The Fighter", "Drama", "false", "25 February 2011", "../images/The Fighter.jpg")
+      ],
+      users:[],
+      username:"",
+    };
+  },
 
-const component = {
-
-  data() {
-    return {
-
-      movie_properties:{
-        id:[],
-        names:[],
-        genre:[],
-        comingSoon:[],
-        avalable:[],
-        thumbnail:[],
-        preview:[]
-      },
-
-      list: [],
-      search: ''
+  methods:{
+    addToWatchList(index){
+      if(!localStorage.getItem(WATCHLIST_KEY)){
+        let watchList=[];
+        watchList.push(this.movies[index]);
+        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList))
+      }
     }
-  },
+  }
+})
 
-  computed:{
-    filteredList(){
-        return this.list.filter(item => item.includes(this.search))
-    },
-
-    createID(){
-        return this.list.id()
-    }
-  },
-
-  mounted() {
-    getData().then((resolveData) => 
-    { 
-      this.list = resolveData;
-      const result = {
-        id:[],
-        names:[],
-        genre:[],
-        comingSoon:[],
-        available:[],
-        thumbnail:[],
-        preview:[]
-      };
-
-      const tmp = new Date();
-      const today = tmp.getFullYear() + '-' + String(tmp.getMonth() + 1).padStart(2,'0') + '-' + String(tmp.getDate()).padStart(2,'0');
-      resolveData.forEach(movie => 
-        {
-        result.id.push(movie.id);
-        result.names.push(movie.name);
-        result.comingSoon.push(movie.is_coming_soon > 0);
-        result.thumbnail.push(movie.image);
-        result.preview.push(movie.description);
-        result.available.push(movie.release_date <= today);
-      });
-      this.movie_properties = result;
-    })
-  },
-
-
-  template: /*HTML Elements*/
-    `
-   
-    `
-}
-
-window.addEventListener("DOMContentLoaded", () => {
-  const app = createApp(component);
-  app.mount("#netflixApp");
-});
