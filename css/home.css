@@ -13,13 +13,13 @@ body{
 .navbar ul{
   display: flex;
   list-style: none;
-  margin-left: 13rem;
+  margin-left: 9rem;
   margin-top:1.5rem;
   
 }
 
 .navbar li{
-padding-left: 8rem;
+padding-left: 6rem;
 cursor: pointer;
 color: white;
 }
@@ -38,12 +38,8 @@ display: flex;
     filter: invert(11%) sepia(94%) saturate(7355%) hue-rotate(355deg) brightness(91%) contrast(97%); 
 }
 
-.search
-{
-    margin-left:12rem;
-    background-color: black;
-    border: none;
-    color:white;
+#username{
+    margin-left: 10rem;
 }
 
 .hero-image img{
