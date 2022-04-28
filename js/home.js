@@ -1,8 +1,5 @@
 import {MovieList} from "../js/moviesClasses.js";
 
-const url = "https://project-apis.codespace.co.za/api/movies";
-const watchlistEndpoint = " https://project-apis.codespace.co.za/api/list";
-
 const USER_SIGNED_IN_KEY = "sign-in-user-storage-key";
 const WATCHLIST_KEY = "watchlist-storage key";
 
@@ -16,13 +13,14 @@ Vue.createApp({
         new movie("#2892", "The Witcher", "Fantasy TV Shows", "false", "20 December 2019", "../images/The Witcher.jpg"),
         new movie("#8679", "The Fighter", "Drama", "false", "25 February 2011", "../images/The Fighter.jpg")
       ],
-      users:[],
+
+      users: [],
       username:"",
     };
   },
 
   methods:{
-    addToWatchList(index){
+    watchList(index){
       if(!localStorage.getItem(WATCHLIST_KEY)){
         let watchList=[];
         watchList.push(this.movies[index]);
@@ -34,9 +32,24 @@ Vue.createApp({
         );
 
         watchList.push(this.movies[index]);
-        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList))
-      }
+        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList));
     }
+  },
+
+  watchList(){
+    window.location.href = "../pages/watchList.html";
+  },
+
+  logout(){
+    localStorage.removeItem(USER_SIGNED_IN_KEY);
+    window.location.href = "../pages/index.html";
   }
+  
+  mounted(){
+    this.users = JSON.parse(localStorage.getItem(SER_SIGNED_IN_KEY));
+    this.username = this.users[0].username;
+  },
 })
+
+.mount("#app");
 
