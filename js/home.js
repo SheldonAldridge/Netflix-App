@@ -16,8 +16,26 @@ Vue.createApp({
 
       users: [],
       username:"",
+      comingSoon:[],
+      visibleSlide:0,
     };
   },
+
+  computed:{
+    moviesComingsoon(){
+      return this.movies.filter((movie) => {
+        return !movie.comingSoon;
+      });
+    }
+
+    avalMovies(){
+      return this.movies.filter((movie) =>{
+        return !movie.comingSoon;
+      })
+    }
+
+    
+  }
 
   methods:{
     watchList(index){
