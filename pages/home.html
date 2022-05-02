@@ -26,18 +26,29 @@
               <li>New & Popular</li>
               <li @click="watchList">My List</li>
               <li id="username">{{username}}</li>
-              <li @click="logout">Logout</li>
+              <li><a class="logout" @click="logout"></a>Logout</li>
             </ul>
           </div>
         </div>
+
+        <div class ="movies-comingSoon">
+          <div v-for="(movie, index)" :key="movie.id" :index="index" :visibleSlide="visibleSlide" v-show="visibleSlide === index"></div>
+        </div>
         </header>
     
-        <main>
-        <div class="hero-image">
-        <img src="../images/Hero Image.jpg" alt="Hero Image">
-        </div>
+       
+
         <section>
         <div class = "movie-list">
+          <ul>
+            <li v-for="(movie, index)" :key="movie.id">
+            <span>{{movie.name}}</span>
+            <span>{{movie.genre}}</span>
+            <span>{{movie.availDate}}</span>
+            <img src="movie.thumbnail" alt="Movie Image">
+            <button class = "watchbtn" @click = "watchList(index)">Add movie to watchlist</button>
+          </li>
+          </ul>
       
         </div>
         </section>
