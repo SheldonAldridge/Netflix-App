@@ -41,3 +41,11 @@ display: flex;
 #username{
     margin-left: 10rem;
 }
+
+.container{
+    margin:5rem;
+}
+
+.container h1{
+    color:white;
+}
