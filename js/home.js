@@ -1,4 +1,4 @@
-import {MovieList} from "../js/moviesClasses.js";
+import { MovieList } from "../js/moviesClasses.js";
 
 const USER_SIGNED_IN_KEY = "sign-in-user-storage-key";
 const WATCHLIST_KEY = "watchlist-storage key";
@@ -17,7 +17,7 @@ Vue.createApp({
       users: [],
       username:"",
       comingSoon:[],
-      visibleSlide:0,
+      slidebyindex:null,
     };
   },
 
@@ -26,22 +26,20 @@ Vue.createApp({
       return this.movies.filter((movie) => {
         return !movie.comingSoon;
       });
-    }
+    },
 
-    avalMovies(){
+    availMovies(){
       return this.movies.filter((movie) =>{
         return !movie.comingSoon;
-      })
-    }
-
-    
-  }
+      });
+    },
+  },
 
   methods:{
     watchList(index){
       if(!localStorage.getItem(WATCHLIST_KEY)){
         let watchList=[];
-        watchList.push(this.movies[index]);
+        watchList.push(this.availMovies[index]);
         localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList));
       }
       else{
@@ -49,7 +47,7 @@ Vue.createApp({
           localStorage.getItem(WATCHLIST_KEY)
         );
 
-        watchList.push(this.movies[index]);
+        watchList.push(this.availMovies[index]);
         localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchList));
     }
   },
@@ -60,13 +58,13 @@ Vue.createApp({
 
   logout(){
     localStorage.removeItem(USER_SIGNED_IN_KEY);
-    window.location.href = "../pages/index.html";
+    window.location.href = ".../../index.html";
   },
 },
 
   mounted(){
     this.users = JSON.parse(localStorage.getItem(USER_SIGNED_IN_KEY));
-    this.username = this.users[0].username;
+    this.username = this.users[0]._username;
   },
 })
 
