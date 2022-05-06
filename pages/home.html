@@ -15,7 +15,7 @@
 <body>
 
     <header>     
-      <div id ="app">  
+      <div id ="netflixapp">  
          <div class="navbar">
     
          <div class="netflix-logo">
@@ -51,21 +51,21 @@
           <div class="carousel-inner">
             <template v-for="(slide, index) in moviesComingsoon">
               <div :class="{'carousel-item': true, active: index === 0}">
-                <img :src="{{movie.name}}" class="d-block w-100" alt="...">
+                <img :src="{{movie.name}}" class="d-block w-100" alt="Movie Coming Soon">
                 <div class="carousel-caption d-none d-md-block">
                   <h5>{{slide.name}}</h5>
                   <p>{{slide.availDate}}</p>
                 </div>
               </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </template>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
           </div>
   
@@ -79,16 +79,16 @@
           </div>
 
           <ul class = "list-of-movies">
-            <li v-for="(movie, index) in comedy" :key="MovieList.id" @mouseover="movie.showByIndex = index" @mouseout="movie.showByIndex = null" :class="{'list-card':movie.showByIndex}"></li>
+            <li v-for="(movie, index) in comedy" :key="movies.id" @mouseover="movie.slideshowindex = index" @mouseout="movie.slideshowindex = null" :class="{'list-card':movie.slideshowindex}"></li>
           </ul>
 
          
             <div class = "card">
               <img src="movie.thumbnail" class="card-img-top" alt="Movie Image">
-              <div class="card-body" v-show="MovieList.showByIndex === index">
+              <div class="card-body" v-show="movies.showByIndex === index">
                 <div class = "movie-info"></div>
-                <p class="card-text">{{MovieList.name}}</p>
-                <p class="card-text">{{MovieList.duration}} • {{MovieList.genre}}</p>
+                <p class="card-text">{{movies.name}}</p>
+                <p class="card-text">{{movies.duration}} • {{movies.genre}}</p>
               </div>
             </div>
          
