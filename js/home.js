@@ -13,7 +13,7 @@ Vue.createApp({
         "false", 
         "106 minutes",
         "9 March 2022", 
-        "../images/The Adam Project.jpg"),
+        "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQr8Qa4KG69tj9KcwskjJq9rAovupDtcPVlcu1T1aHKxXQqP98t3YNL4NYNN-Ll0eqQh8dFdaAtaGYD6Qj-_0x36cnUXstpp6-y5jRdaSXkmCDASTDlpZz1hBg.webp?r=6ef"),
         
         new movie("#7770", 
         "Here Comes The Boom", 
@@ -26,40 +26,40 @@ Vue.createApp({
         new movie("#2385", 
         "IZombie", 
         "Crime",
+        "false",
         "42 minutes",
-        "false", 
         "17 March 2015", 
-        "../images/I Zombie.jpg"),
+        "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABen4hrWdW8EPoWoGmgQZyXKe0LkHSS5s3_EWpdbkugkIze06dsgFELnnW8fe6eq23UEIjsQsfjzGhA0epNzbpCZLHurJ9Tw48y4_.webp?r=c0e"),
 
         new movie("#2892", 
         "The Witcher", 
         "Fantasy",
+        "false",
         "47-67 minutes", 
-        "false", 
         "20 December 2019", 
-        "../images/The Witcher.jpg"),
+        "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABSzFqrewVma8qubSm2ufZ5Y8-Q8s32hhyv7zOLJZIbqp_0FwjVn0kE1ZvNxJfk3hmTPqgz_4C9d48OIXS9FNiZ-COLqm9edtB8dFgcijpFjJn5w4T6mfmY8yNg.webp?r=6a6"),
 
         new movie("#8679", 
         "The Fighter", 
         "Drama", 
-        "116 minutes",
         "false", 
+        "116 minutes",
         "25 February 2011", 
         "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABdOBQIok_7x8t8a2XGbRkjMGRcKjpMArjfho0Fo3uL8MQn_7vG9l-IrA4_Fe7HN1tWRTWwAqNMl9BG3l_20GSdXPAL-gxv0cJ8Uk.webp?r=53e"),
 
         new movie("#7859",
         "Jackass 3.5",
         "Comedy",
-        "84 minutes",
         "false",
+        "84 minutes",
         "14 June 2011",
-        "https://assets.nflxext.com/en_us/ffe/player/html/cadmium-playercore-6.0034.747.911.js")
+        "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZ2iBUWD19pSI3OASFvafY-rKoS7CcLNuY-sfep5JHKFAfRYcV-GoKUTuJMCk7h57UagK-LNDF_25OShrmAaRUfJw_RJwPJy6zSk.webp?r=88c")
       ],
 
       users: [],
       username:"",
       comingSoon:[],
-      slidebyindex:null,
+      slideshowindex:null,
     };
   },
 
@@ -134,5 +134,5 @@ Vue.createApp({
   },
 })
 
-.mount("#app");
+.mount("#netflixapp");
 
