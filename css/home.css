@@ -68,3 +68,19 @@ list-style-type: none;
 display: flex;
 flex-direction: column;
 }
+
+.movies{
+    display: grid;
+    grid-template-columns: repeat(5, 400px);
+    column-gap: 0.5%;
+    row-gap: 12%;
+    margin-right: 2%;
+}
+
+.movies li{
+    list-style: none;
+}
+
+.list-of-movies{
+    position: relative;
+}
