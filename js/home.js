@@ -10,18 +10,18 @@ Vue.createApp({
         new movie("#6507", 
         "The Adam Project", 
         "Sci-Fi", 
-        "106 minutes",
         "false", 
+        "106 minutes",
         "9 March 2022", 
         "../images/The Adam Project.jpg"),
         
         new movie("#7770", 
         "Here Comes The Boom", 
         "Comedy",
+        "false",
         "105 minutes",
-        "false", 
         "12 October 2012", 
-        "../images/Here Comes The Boom.jpg"),
+        "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABazQ4Z5r1lg_fwOK_h2pWt_86Xtup4p7_Zz_a-V-xS1m9okvm1yMqjO1Yk5hDvQOLeAT3aUJkVYm55V9nvlNCt5I_hd4ICgtOadhUs31b-AK5gMSscBFB4COow.webp?r=657"),
         
         new movie("#2385", 
         "IZombie", 
@@ -79,7 +79,7 @@ Vue.createApp({
 
   comedy(){
     return this.movies.filter((movie) =>{
-      return movie.genre === "Comedy" && !movie.comingSoon;
+      return movie.genre === "comedy" && !movie.comingSoon;
     });
   },
 
@@ -126,7 +126,7 @@ Vue.createApp({
     localStorage.removeItem(USER_SIGNED_IN_KEY);
     window.location.href = ".../../index.html";
   },
-},
+
 
   mounted(){
     this.users = JSON.parse(localStorage.getItem(USER_SIGNED_IN_KEY))
