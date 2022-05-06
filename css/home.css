@@ -55,7 +55,7 @@ display: flex;
 .carousel-control-prev, .carousel-control-next{
     padding-top:10px !important;
     padding-bottom:10px !important;
-    z-index: 99999999999999;
+    z-index: 0;
 }
 
 .movie-list{
