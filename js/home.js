@@ -59,7 +59,7 @@ Vue.createApp({
       users: [],
       username:"",
       comingSoon:[],
-      slideshowindex:null,
+      showByIndex:null,
     };
   },
 
