@@ -14,7 +14,8 @@
 
 <body>
 
-    <header>        
+    <header>     
+      <div id ="app">  
          <div class="navbar">
     
          <div class="netflix-logo">
@@ -71,21 +72,32 @@
          
         
         <section>
-        <div class = "movie-list">
-          <ul>
-            <li v-for="(movie, index)" :key="movie.id">
-            <span>{{movie.name}}</span>
-            <span>{{movie.genre}}</span>
-            <span>{{movie.availDate}}</span>
-            <img v-bind:src="movie.thumbnail" alt="Movie Image">
-            <button class = "watchbtn" @click = "watchList(index)">Add movie to watchlist</button>
-          </li>
+        <div class = "movies">
+
+          <div class = "movie-genre">
+            <h2>Comedy</h2>
+          </div>
+
+          <ul class = "list-of-movies">
+            <li v-for="(movie, index) in comedy" :key="MovieList.id" @mouseover="movie.showByIndex = index" @mouseout="movie.showByIndex = null" :class="{'list-card':movie.showByIndex}"></li>
           </ul>
-      
+
+         
+            <div class = "card">
+              <img src="movie.thumbnail" class="card-img-top" alt="Movie Image">
+              <div class="card-body" v-show="MovieList.showByIndex === index">
+                <div class = "movie-info"></div>
+                <p class="card-text">{{MovieList.name}}</p>
+                <p class="card-text">{{MovieList.duration}} • {{MovieList.genre}}</p>
+              </div>
+            </div>
+         
+
         </div>
         </section>
         </main>
-        
+      </div> 
 </body>
 
 </html>
+
