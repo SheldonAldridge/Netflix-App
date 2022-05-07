@@ -55,32 +55,28 @@ display: flex;
 .carousel-control-prev, .carousel-control-next{
     padding-top:10px !important;
     padding-bottom:10px !important;
+    margin-top: 8rem !important;
+    margin-bottom: 8rem !important;
     z-index: 0;
 }
 
 .movie-list{
     position: absolute;
     color: white;
-}
-
-.movie-list li{
-list-style-type: none;
-display: flex;
-flex-direction: column;
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 21rem);
+    column-gap:1rem;
+    row-gap: 1rem;
 }
 
 .movies{
-    display: grid;
-    grid-template-columns: repeat(5, 400px);
-    column-gap: 0.5%;
-    row-gap: 12%;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
     margin-right: 2%;
-}
-
-.movies li{
-    list-style: none;
-}
-
-.list-of-movies{
-    position: relative;
 }
