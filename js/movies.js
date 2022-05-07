@@ -1,21 +1,21 @@
-export class Movie{
-
-    constructor(id, 
-        namesOfMovies, 
-        genre, 
-        comingSoon, 
-        availableDate, 
-        duration, 
-        thumbnail, 
-        showByIndex,
-        ){
-        this.id = id;
-        this.name = namesOfMovies;
-        this.genre = genre;
-        this.comingSoon = comingSoon;
-        this.availDate = availableDate;
-        this.duration = duration;
-        this.thumbnail = thumbnail;
-        this.showByIndex = showByIndex;
-    }
+export class Movie {
+  constructor(
+    id,
+    moviename,
+    genre,
+    duration,
+    comingSoon,
+    availDate,
+    thumbnail,
+    showByIndex,
+  ) {
+    this.id = id;
+    this.name = moviename;
+    this.genre = genre;
+    this.duration = duration;
+    this.comingSoon = comingSoon;
+    this.availDate = availDate;
+    this.thumbnail = thumbnail;
+    this.showByIndex = showByIndex;
+  }
 }
