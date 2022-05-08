@@ -17,7 +17,6 @@ body{
   list-style: none;
   margin-left: 5rem;
   margin-top:1.5rem;
-  
   z-index: 1;
 }
 
@@ -70,6 +69,10 @@ display: flex;
     margin-top:5rem;
     
 }
+
+.genres-main,.genres{
+    margin-left5r
+}
 .movies-main{
     list-style: none;
     display: grid;
@@ -93,13 +96,13 @@ display: flex;
     background-color: rgb(53, 53, 53);
 }
 
+
 .movie-info p{
    font-size: 25px; 
 }
 
 .movieDuration-genre{
     font-size: 20px !important; 
-    display: flex;
 }
 
 .watchList-btn{
