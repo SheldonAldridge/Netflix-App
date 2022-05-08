@@ -108,6 +108,16 @@ Vue.createApp({
           null
         ),
         new Movie(
+          "#843",
+          "Pacific Rim",
+          "Sci-Fi",
+          "2h 11m",
+          false,
+          "2013",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbgLxZiUA2_rUJiEemgBnONUTHpNDGHc2pKh2talf3L74Ru5yBJ-nLunfZzzbagxJ3UQLWeOkaiy0S_XpOCbyvMVpxUv3i1MEVQ8hNJPMW_C87TyXfWd2vBcld1U3tfdohkFyRhvdf1r-cPVJ9EtIHX5cuPFytpgIrx5.webp?r=cb0",
+          null
+        ),
+        new Movie(
           "#184",
           "Ghost In The Shell SAC_2045",
           "Sci-Fi",
@@ -197,6 +207,36 @@ Vue.createApp({
           "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABbJYKvtjjZuTYhiLa4KPbLphm87ii-EYueKmtbBiwgk-_I1NSgZESveswmSC6cvFz7OgCDTYc5D_CuX6Se2eSil3BnDxtBuQBOfg.webp?r=27e",
           null
         ),
+        new Movie(
+          "#951",
+          "The Persuit of Happyness",
+          "Drama",
+          "1h 57m",
+          false,
+          "2006",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABSLHeQAztBl-5ynMVwbKJ-_N2SskAqcBVEw79eJ1GgJg0_4sRjMhFfyVXpBaRJynaP071p3ZH-LJr5ZCL_1QKZa5rmru2twLe5lt.webp?r=a5a",
+          null
+        ),
+        new Movie(
+          "#750",
+          "Unbroken",
+          "Drama",
+          "2h 17m",
+          false,
+          "2014",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABVSVlbP2HRFtRqbi77OZi4nDyXhbZ3V-Pz0kzvCci9erd9tEdLplb29SetVMmFHB6IzVV15uSaBLVLV9uJO2vnBNeoRNX05nlyxZ.webp?r=02b",
+          null
+        ),
+        new Movie(
+          "#760",
+          "The Cobler",
+          "Drama",
+          "2h 17m",
+          false,
+          "2014",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABX40bgnQFkygGVzarEUpCVL3FZP9PUtZzr4gqASv3hMls4S9LDe7ifbsGky0SDXkIB_3XySODLoFi7z2WiAQEdleZTIP0aVrpTB1.webp?r=37f",
+          null
+        ),
       ],
 
       comingSoon: [],
@@ -211,7 +251,7 @@ Vue.createApp({
         return movie.comingSoon;
       });
     },
-    avai() {
+    avail() {
       return this.movies.filter((movie) => {
         return !movie.comingSoon;
       });
