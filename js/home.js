@@ -14,7 +14,7 @@ Vue.createApp({
           "109m",
           false,
           "2013",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABZkdCzYWbd_hHWB9gBWxsfGeQQcJbtcxjpMeLcUzLlvZ5WMpOtx7A3wujSDFl8d9VQ6ZPfKaiW04jOtCFItOwgAVw6ZRAnY3k7ig.webp?r=38f",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfnWrDDgRHI_o8Jg2pc5v1TJ30TT1BDWQ9U4VpSfzrDLKkpdrFFak5f9Er2fJwW_0xu2CMfkbDaOh7Wh_-5PwYQOiKH5FSaUaMuLSZU2mIrVOuuCZdGsAnEx6SCLlktQNYq5YEWI_eh0BKLb-sthwATHno5rl6Fyby79.webp?r=ae5",
           null
         ),
         new Movie(
@@ -24,17 +24,17 @@ Vue.createApp({
           "119m",
           false,
           "2005",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABUCCs9s0MMTjd0JoOKVEGislShKuRRBbRLBuz_EzyrvDWr9GF9UuKaH-saJ-91Zx1vfY-UfxPnrCfDtyJ_K1Nio8MmCdF-6jZSU1.webp?r=e15",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABWNMy719lPZZnV7SuQihx3kNsCf6WZc8ite-bX_iE9x_oGtLstiUrPPh0Dum5n6MIYjOV3PSbs_GwbRz1i4yicZCO32sbYWA8J_q.webp?r=18d",
           null
         ),
         new Movie(
           "#314",
           "Hot Rod",
           "Comedy",
-          "88",
+          "88m",
           false,
           "2007",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABevEp2agTioLPBURI9ba_Emz-rucJrUeqk2RWhBj4_c19DHsUK5iHU6Cdca3noT6QwXauTROy1mEUjquN1qu0dQZtIRlD5Qb66H6.webp?r=21a",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABRvT2jl0vkVkmg8xrBozQRqsYAHv5lc2xxBZ2S3JEJesZjyeuiqr-kzbYPk_So9f5ckQsrODh8dDbUU7lNVlRgdYQxGYa_-BN_6k.webp?r=9ab",
           null
         ),
         new Movie(
@@ -44,7 +44,7 @@ Vue.createApp({
           "1h 45m",
           false,
           "2012",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABazQ4Z5r1lg_fwOK_h2pWt_86Xtup4p7_Zz_a-V-xS1m9okvm1yMqjO1Yk5hDvQOLeAT3aUJkVYm55V9nvlNCt5I_hd4ICgtOadhUs31b-AK5gMSscBFB4COow.webp?r=657",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABZb2qkrwskXk0e7giq-Xy7NkVsOBRILWCBV8pe6vYseYibLWGSZHmu_ZlGRjR3pa5zsckrhQ8zOgYhxk8ibYpOk8ciopdJEGYEl4.webp?r=f3b",
           null
         ),
         new Movie(
@@ -64,7 +64,7 @@ Vue.createApp({
           "1h 40m",
           true,
           "24 / 05 / 2022",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/E8vDc_W8CLv7-yMQu8KMEC7Rrr8/AAAABUpTWneCBiF7wL_rKDZ-R2hHi0MN-7sNtwiFB1BQmzMQzEwa15Ap5xhlSS6ww6Xu7tBAbK_w1hNxjcVAZI6063d10cyDKOe8ATNV.webp?r=2e6",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABTIpSmQcCimhDUXGLL8HoD0bwEYIUnpTNs75a2_RpK8q_5InF_ZeYtU7POJwFlCpezCDcnGB6WsXb4Xh5cnSZ4AAaAr3-BrNweSnhnl28DA3PvEF8ywKgpllAcjJyaTIj4oHQA.jpg?r=1a9",
           null
         ),
         new Movie(
@@ -285,7 +285,7 @@ Vue.createApp({
   methods: {
     WatchList(id) {
 
-      if (!localStorage.getItem(MOVIE_WATCHLIST_KEY)) {
+      if (!localStorage.getItem(WATCHLIST_KEY)) {
         let watchListArray = [];
 
         let watchListMovie = this.movies.find(function (movie) {
@@ -294,12 +294,12 @@ Vue.createApp({
         watchListArray.push(watchListMovie);
 
         localStorage.setItem(
-          MOVIE_WATCHLIST_KEY,
+          WATCHLIST_KEY,
           JSON.stringify(watchListArray)
         );
       } else {
         let watchListArray = JSON.parse(
-          localStorage.getItem(MOVIE_WATCHLIST_KEY)
+          localStorage.getItem(WATCHLIST_KEY)
         );
 
         let watchListMovie = this.movies.find(function (movie) {
@@ -308,25 +308,25 @@ Vue.createApp({
         watchListArray.push(watchListMovie);
 
         localStorage.setItem(
-          MOVIE_WATCHLIST_KEY,
+          WATCHLIST_KEY,
           JSON.stringify(watchListArray)
         );
       }
     },
 
-    navToWatchList() {
+    watchListNav() {
       window.location.href = "../pages/watchList.html";
     },
 
     logout() {
       localStorage.removeItem(USER_SIGNED_IN_KEY);
-      window.location.href = "../../index.html";
+      window.location.href = "../index.html";
     },
   },
 
   mounted() {
     this.users = JSON.parse(localStorage.getItem(USER_SIGNED_IN_KEY));
-    this.username = this.userArray[0]._username;
+    this.username = this.users[0].username;
   },
 }).mount("#netflixapp");
 
