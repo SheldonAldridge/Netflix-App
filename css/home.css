@@ -93,6 +93,21 @@ display: flex;
     background-color: rgb(53, 53, 53);
 }
 
-.movie-info{
+.movie-info p{
+   font-size: 25px; 
+}
 
+.movieDuration-genre{
+    font-size: 20px !important; 
+    display: flex;
+}
+
+.watchList-btn{
+    width:3rem;
+    height: 3rem;
+    border: none;
+    background: rgb(15, 15, 15);
+    border-radius:30rem;
+    color:white;
+    font-size:20px;
 }
