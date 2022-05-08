@@ -74,7 +74,7 @@ Vue.createApp({
           "1h 46m",
           false,
           "2022",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABQr8Qa4KG69tj9KcwskjJq9rAovupDtcPVlcu1T1aHKxXQqP98t3YNL4NYNN-Ll0eqQh8dFdaAtaGYD6Qj-_0x36cnUXstpp6-y5jRdaSXkmCDASTDlpZz1hBg.webp?r=6ef",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABfR6xQh_v4IQm4ORWPLuEjgSowYn_6U7fimFosJXiQfnT3lkqoRtkquRWYsmudntaOjfD1LdYonVHAeq4jM5zDIfIhgWuXntfW9v6o4QH8JWY1m7Uv9SWnbSkR6cftF2Zm6oJg.jpg?r=484",
           null
         ),
         new Movie(
@@ -84,7 +84,7 @@ Vue.createApp({
           "1h 52m",
           false,
           "2020",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/9pS1daC2n6UGc3dUogvWIPMR_OU/AAAABSf2D-ufix8aWAjOFAUOUzT0NY-TGUpbq2bPT5sWmVlyR_le9zfwZEXvZcEhscrs2W5dOFI-v3xW6erjkQdQl4GBeDxwmog_iOcbjD4awXqyPJHcDGSen2OFlA.webp?r=75f",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABb48RVxuBO0fzYzSHmkEmajuGZ7W0leOkL_WO_ps5OSazngsms82PiLXrWnGXmnl5WCPUJAEIJoWShtZsaccVx5ldolaSgmIcUdxfHbJXnhwc9hSM9l1qQCdm9_ikK2kZB654ga46NToZ-uJEifXuXcISwoftoyqmwYS.webp?r=93b",
           null
         ),
         new Movie(
@@ -94,7 +94,7 @@ Vue.createApp({
           "109m",
           false,
           "2021",
-          "https://assets.whatsnewonnetflix.com/external_assets/sggkh+%5B%5Blxx*9*7079*8259_8_muochl_mvg%5Bwmn%5Bzkr%5Be3%5BC805vQhtDYWV7zJyzMwnXCTFK*B%5BZZZZYHBVZz17HY1kdRlsAaWpcDpevTKEL5*cO1QyMPSGX3J00*9rYy7*epdloNzO*gW*7nEkcEWxM6czy3zPSR1*i8pdU41.jpg",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABQoVOJuKvT9dgP-wLUtae5cl2aRb0o7U-DhkilYK2PAVTOgPofb81dqcX-QgF8kpQanJ_z7OHoUFTwN5j4E3wjbpCdX0xrb847j-FqYob0RmKVylgFl-fadmZys1IFdHchAtDw.jpg?r=1ca",
           null
         ),
         new Movie(
@@ -104,7 +104,7 @@ Vue.createApp({
           "2h 20m",
           false,
           "2013",
-          "https://assets.whatsnewonnetflix.com/external_assets/sggkh+%5B%5Blxx*9*251*8998_8_muochl_mvg%5Bzig%5By7838%5B55841v448w929w1uwuu55v3xv11zv4w065yy7838.jpg",
+          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABax_xs1_aNvNPgNSdbAa_1TTColkxICCTlZeccrh0NW8tRH3ATJ6_sTzRa-O4UIvHRmNdXdFeZzAaaPI8JxZw60KYTIw3EAzotxy.webp?r=33a",
           null
         ),
         new Movie(
@@ -135,16 +135,6 @@ Vue.createApp({
           false,
           "2013",
           "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABS384ss7FqkWpX99iw-KeWoY3b7dx4cEOiZ2uYpuKKpNyiuiYmytwN3yaaAzN3-cRsZpAPt-ol9PKjP4ZOOHv3Xope90ctBgRYwJ.webp?r=c20",
-          null
-        ),
-        new Movie(
-          "#257",
-          "Monty Python and the Holy Grail",
-          "Fantasy",
-          "1h 32m",
-          false,
-          "1975",
-          "https://occ-0-1254-34.1.nflxso.net/dnm/api/v6/X194eJsgWBDE2aQbaNdmCXGUP-Y/AAAABeYt7VXdQ-ZpuW7yhShUmw8k2n8m6V7iQBPY2Gk-kSPBmQbsQ3D0IlxlXUJyxQE7SK-SgsSiZYZS0MzmiJYUjIPOnXH89ryYHAiy.webp?r=ac6",
           null
         ),
         new Movie(
@@ -210,7 +200,7 @@ Vue.createApp({
       ],
 
       comingSoon: [],
-      userArray: [],
+      users: [],
       username: "",
     };
   },
@@ -285,7 +275,7 @@ Vue.createApp({
     },
 
     navToWatchList() {
-      window.location.href = "../pages/mylist.html";
+      window.location.href = "../pages/watchList.html";
     },
 
     logout() {
@@ -295,7 +285,7 @@ Vue.createApp({
   },
 
   mounted() {
-    this.userArray = JSON.parse(localStorage.getItem(USER_SIGNED_IN_KEY));
+    this.users = JSON.parse(localStorage.getItem(USER_SIGNED_IN_KEY));
     this.username = this.userArray[0]._username;
   },
 }).mount("#netflixapp");
