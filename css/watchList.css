@@ -7,39 +7,40 @@ body{
 .navbar{
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgba(0,0,0,1) 6%, rgba(0,0,0,0.8379726890756303) 26%, rgba(0,0,0,0.5634628851540616) 52%, rgba(0,0,0,0) 100%);
-
+    z-index: 1;
+    justify-content: left;
 }
 
 .navbar ul{
   display: flex;
   list-style: none;
-  margin-left: 9rem;
+  margin-left: 5rem;
   margin-top:1.5rem;
-  
+  z-index: 1;
 }
 
 .navbar li{
 padding-left: 6rem;
 cursor: pointer;
 color: white;
+
 }
 
 .netflix-logo {
 display: flex;
+
 }
 
 .netflix-logo img
 {
-    margin-top:1rem;
+    margin-top:-1rem;
     height: 35px;
     width: 167px;
     margin: 1rem;
-    position: absolute;
     filter: invert(11%) sepia(94%) saturate(7355%) hue-rotate(355deg) brightness(91%) contrast(97%); 
 }
-
 #username{
-    margin-left: 10rem;
+    margin-left: 70rem;
 }
 
 .container{
@@ -48,4 +49,74 @@ display: flex;
 
 .container h1{
     color:white;
+}
+
+.genres-main,.genres{
+    margin-left:5rem;
+}
+.movies-main{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 21rem);
+    gap: 1rem;
+}
+
+.movies{
+    list-style: none;
+    display: grid;
+    grid-template-columns: repeat(5, 21rem);
+    gap: 1rem;
+}
+
+.genres-main, .movies{
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+h4{
+    color: white;;
+}
+
+.card-body{
+    background-color: rgb(53, 53, 53);
+}
+
+.movie-info p{
+   font-size: 25px; 
+}
+
+.movieDuration-genre{
+    font-size: 20px !important; 
+}
+
+.watchList-btn{
+    width:3rem;
+    height: 3rem;
+    border: none;
+    background: rgb(15, 15, 15);
+    border-radius:30rem;
+    color:white;
+    font-size:20px;
+}
+
+.card-body{
+    background-color: rgb(53, 53, 53);
+}
+
+.movie-info p{
+   font-size: 25px; 
+}
+
+.movieDuration-genre{
+    font-size: 20px !important; 
+}
+
+.remove-btn{
+    width:3rem;
+    height: 3rem;
+    border: none;
+    background: rgb(15, 15, 15);
+    border-radius:30rem;
+    color:white;
+    font-size:20px;
 }
