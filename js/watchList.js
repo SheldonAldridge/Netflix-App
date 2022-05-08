@@ -12,6 +12,11 @@ Vue.createApp({
     },
 
     methods:{
-        remove
+        removeMovieList(id){
+            this.watchList = JSON.parse(
+                localStorage.getItem(WATCHLIST_KEY)
+            );
+            this.
+        }
     }
 })
