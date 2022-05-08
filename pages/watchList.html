@@ -30,7 +30,9 @@
 <main>
     <div class="container">
         <h1>My WatchList</h1>
-
+        <div class = "movies">
+            <li v-for="(movie, index) in comedy" :key="movie.id" @mouseover="movie.showByIndex = index" @mouseout="movie.showByIndex = null" :class="{'movie-card': movie.showByIndex+1}"> 
+        </div>
         
     </div>
 </main>
