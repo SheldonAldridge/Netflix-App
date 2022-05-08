@@ -24,12 +24,10 @@ body{
 padding-left: 6rem;
 cursor: pointer;
 color: white;
-
 }
 
 .netflix-logo {
 display: flex;
-
 }
 
 .netflix-logo img
@@ -42,15 +40,14 @@ display: flex;
 }
 
 #username{
-    margin-left: 10rem;
-}
-
-.carousel-container{
-    margin-top:-10rem;
+    position: relative;
+    margin-left: 70rem;
+    color: white;
 }
 
 .carousel-inner
 {
+    margin-top:-10rem;
     width:100vw;
 }
 
@@ -71,19 +68,19 @@ display: flex;
 }
 
 .genres-main,.genres{
-    margin-left5r
+    margin-left:5rem;
 }
 .movies-main{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 21rem);
+    grid-template-columns: repeat(5, 29rem);
     gap: 1rem;
 }
 
 .movies{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 21rem);
+    grid-template-columns: repeat(5, 29rem);
     gap: 1rem;
 }
 
@@ -94,6 +91,14 @@ display: flex;
 
 .card-body{
     background-color: rgb(53, 53, 53);
+    animation: float 1s 1;
+}
+
+@keyframes float {
+    from{transform: scale(0, 0);
+        transform: translate(0, 0);}
+    to{transform: scale(2, 2);
+        transform: translate(0px, 100px);}
 }
 
 
@@ -114,3 +119,4 @@ display: flex;
     color:white;
     font-size:20px;
 }
+
