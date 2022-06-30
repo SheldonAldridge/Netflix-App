@@ -16,14 +16,16 @@ body{
   display: flex;
   list-style: none;
   margin-left: 5rem;
-  margin-top:1.5rem;
+  margin-top:-2.5rem;
   z-index: 1;
+ 
 }
 
 .navbar li{
 padding-left: 6rem;
 cursor: pointer;
 color: white;
+ width:15rem;
 }
 
 .netflix-logo {
@@ -41,7 +43,7 @@ display: flex;
 
 #username{
     position: relative;
-    margin-left: 70rem;
+    margin-left: 10rem;
     color: white;
 }
 
@@ -61,6 +63,7 @@ display: flex;
 
 
 .movie-list{
+    margin-left: -4rem;
     position: relative;
     color: White;
     margin-top:5rem;
@@ -69,18 +72,19 @@ display: flex;
 
 .genres-main,.genres{
     margin-left:5rem;
+    width: 5rem;
 }
 .movies-main{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 29rem);
+    grid-template-columns: repeat(5, 22rem);
     gap: 1rem;
 }
 
 .movies{
     list-style: none;
     display: grid;
-    grid-template-columns: repeat(5, 29rem);
+    grid-template-columns: repeat(5, 22rem);
     gap: 1rem;
 }
 
