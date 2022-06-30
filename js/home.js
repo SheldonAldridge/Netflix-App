@@ -284,7 +284,6 @@ Vue.createApp({
 
   methods: {
     WatchList(id) {
-
       if (!localStorage.getItem(WATCHLIST_KEY)) {
         let watchListArray = [];
 
@@ -293,24 +292,16 @@ Vue.createApp({
         });
         watchListArray.push(watchListMovie);
 
-        localStorage.setItem(
-          WATCHLIST_KEY,
-          JSON.stringify(watchListArray)
-        );
+        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchListArray));
       } else {
-        let watchListArray = JSON.parse(
-          localStorage.getItem(WATCHLIST_KEY)
-        );
+        let watchListArray = JSON.parse(localStorage.getItem(WATCHLIST_KEY));
 
         let watchListMovie = this.movies.find(function (movie) {
           return movie.id == id;
         });
         watchListArray.push(watchListMovie);
 
-        localStorage.setItem(
-          WATCHLIST_KEY,
-          JSON.stringify(watchListArray)
-        );
+        localStorage.setItem(WATCHLIST_KEY, JSON.stringify(watchListArray));
       }
     },
 
