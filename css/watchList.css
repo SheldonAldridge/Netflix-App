@@ -14,8 +14,7 @@ body{
 .navbar ul{
   display: flex;
   list-style: none;
-  margin-left: 5rem;
-  margin-top:1.5rem;
+  margin-left: 0rem;
   z-index: 1;
 }
 
@@ -23,7 +22,7 @@ body{
 padding-left: 6rem;
 cursor: pointer;
 color: white;
-
+width:15rem;
 }
 
 .netflix-logo {
@@ -40,7 +39,7 @@ display: flex;
     filter: invert(11%) sepia(94%) saturate(7355%) hue-rotate(355deg) brightness(91%) contrast(97%); 
 }
 #username{
-    margin-left: 70rem;
+    margin-left: 10rem;
 }
 
 .container{
